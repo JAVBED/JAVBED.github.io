@@ -13,13 +13,13 @@ const engines=[
 
 const features=[
   ["Home dashboard","Continue playing, recent sessions, detected games, account shortcut, quick launch and server status."],
-  ["Java instances","Create, import, clone and export isolated instances with loader, memory and runtime preferences."],
+  ["Java instances","Create, clone and export isolated instances with loader, memory and runtime preferences."],
   ["Mods and packs","Browse compatible mods, modpacks, resource packs and shaders from Modrinth; CurseForge where configured."],
-  ["World Manager","Find Java worlds and accessible Bedrock or Education worlds; back up, restore, import and export them."],
+  ["World Manager","Find Java worlds and accessible Bedrock or Education worlds; back up, restore, duplicate and export them."],
   ["Crash Doctor","Inspect recent Java logs and crash reports, then try a reversible mod-free Safe Mode launch."],
   ["Server dashboard","Use SERVLI for status, live console, properties, players, plugins, mods and scheduled backups."],
   ["Updates and Doctor","Review launcher and engine updates, tracked mod updates, downloads and launcher health checks."],
-  ["Your setup","Import other launchers, use portable mode, change appearance and jump to actions with Ctrl+K."]
+  ["Your setup","Use portable mode, change appearance and jump to actions with Ctrl+K."]
 ];
 
 const Arrow=()=> <span>↗</span>;
@@ -77,7 +77,7 @@ function App(){
             <div className="label">THE LAUNCHER</div>
             <h2>Play, manage,<br/><em>pick up where you left off.</em></h2>
           </div>
-          <p>The PySide6 launcher uses JAVLI, BEDLI, EDULI, LEGLI and SERVLI for game and server work. Use an engine already on PATH or a path you choose, or let JAVBED install a managed copy. Your existing launcher data stays in place when you import it.</p>
+          <p>The PySide6 launcher uses JAVLI, BEDLI, EDULI, LEGLI and SERVLI for game and server work. Use an engine already on PATH or a path you choose, or let JAVBED install a managed copy.</p>
         </div>
       </section>
 
