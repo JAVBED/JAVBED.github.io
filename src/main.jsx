@@ -12,14 +12,14 @@ const engines=[
 ];
 
 const features=[
-  ["Accounts","Microsoft account login, switching, refresh and removal through JAVLI."],
-  ["Instances","Create, launch, clone and import isolated Java instances with loaders."],
-  ["Mods + Modpacks","Modrinth and CurseForge mod workflows plus Modrinth modpack installation."],
-  ["Servers","Create and manage Vanilla, Paper, Purpur, Fabric, Quilt, Forge, NeoForge, BDS, PocketMine and PowerNukkitX."],
-  ["Historical BDS","Browse and install historical Bedrock Dedicated Server versions from the Bedrock-OSS catalog."],
-  ["Settings","Configure RAM, resolution, fullscreen, Java runtime, engine paths, CurseForge key and launcher behavior."],
-  ["Engine updates","Use installed PATH commands or JAVBED-managed engine binaries and update them from GitHub Releases."],
-  ["More Minecraft","Launch Dungeons, Dungeons II and Legends from the same desktop shell when installed."]
+  ["Home dashboard","Continue playing, recent sessions, detected games, account shortcut, quick launch and server status."],
+  ["Java instances","Create, import, clone and export isolated instances with loader, memory and runtime preferences."],
+  ["Mods and packs","Browse compatible mods, modpacks, resource packs and shaders from Modrinth; CurseForge where configured."],
+  ["World Manager","Find Java worlds and accessible Bedrock or Education worlds; back up, restore, import and export them."],
+  ["Crash Doctor","Inspect recent Java logs and crash reports, then try a reversible mod-free Safe Mode launch."],
+  ["Server dashboard","Use SERVLI for status, live console, properties, players, plugins, mods and scheduled backups."],
+  ["Updates and Doctor","Review launcher and engine updates, tracked mod updates, downloads and launcher health checks."],
+  ["Your setup","Import other launchers, use portable mode, change appearance and jump to actions with Ctrl+K."]
 ];
 
 const Arrow=()=> <span>↗</span>;
@@ -43,8 +43,8 @@ function App(){
         <div className="heroCopy">
           <img className="heroLogo" src={logo} alt="JAVBED logo"/>
           <div className="label">UNOFFICIAL OPEN-SOURCE MINECRAFT FAN LAUNCHER</div>
-          <h1>One launcher.<br/><em>Every edition.</em></h1>
-          <p>JAVBED brings Java, Bedrock, Education, Legacy Console, Dungeons, Legends and Minecraft servers into one desktop launcher powered by the JAVBED toolchain.</p>
+          <h1>Your Minecraft<br/><em>home base.</em></h1>
+          <p>Launch and manage Java, Bedrock, Education, Legacy Console, Dungeons, Legends, Story Mode and servers from one open-source desktop app.</p>
           <div className="actions">
             <a className="btn primary big" href="https://github.com/JAVBED/javbed/releases">Download JAVBED <Arrow/></a>
             <a className="btn secondary big" href="https://github.com/JAVBED/javbed">View source <Arrow/></a>
@@ -55,18 +55,18 @@ function App(){
           <aside>
             <strong>JAVBED</strong>
             <small>Universal Minecraft launcher</small>
-            {["JAVA","BEDROCK","EDU","LCE","DUNGEONS","DUNGEONS II","LEGENDS","SERVERS"].map((x,i)=><div className={i===0?"active":""} key={x}>{x}</div>)}
+            {["HOME","JAVA","BEDROCK","EDU","LCE","STORY MODE","SERVERS","WORLDS"].map((x,i)=><div className={i===0?"active":""} key={x}>{x}</div>)}
           </aside>
           <section className="mockMain">
-            <div className="mockTabs"><b>Play</b><span>Instances</span><span>Mods</span><span>Modpacks</span><span>Accounts</span></div>
-            <div className="mockHero">
-              <div className="grass"/>
-              <div className="mockLogo">MINECRAFT<br/><strong>JAVA EDITION</strong></div>
+            <div className="mockTabs"><b>Home</b><span>Java</span><span>Worlds</span><span>Servers</span></div>
+            <div className="mockDashboard">
+              <div className="mockAccount"><small>ACTIVE ACCOUNT</small><strong>Player profile</strong><span>Switch or add account</span></div>
+              <div className="mockContinue"><small>CONTINUE PLAYING</small><strong>Survival</strong><span>Java Edition · Fabric · 1.21.1</span><span className="mockPlayAction">PLAY</span></div>
+              <div className="mockWide"><small>RECENTLY PLAYED</small><span>Survival &nbsp;·&nbsp; Bedrock &nbsp;·&nbsp; Story Mode</span></div>
+              <div className="mockTile"><small>GAMES</small><strong>9 editions</strong></div>
+              <div className="mockTile"><small>SERVERS</small><strong>Dashboard</strong></div>
             </div>
-            <div className="mockPlay">
-              <div><small>VERSION</small><strong>Latest release</strong></div>
-              <button>PLAY</button>
-            </div>
+            <div className="mockPlay"><div><small>QUICK LAUNCH</small><strong>Java · Bedrock · Dungeons · Legends</strong></div><span>Ctrl+K to search</span></div>
           </section>
         </div>
       </header>
@@ -75,9 +75,9 @@ function App(){
         <div className="shell split">
           <div>
             <div className="label">THE LAUNCHER</div>
-            <h2>Built for players.<br/><em>Powered by tools.</em></h2>
+            <h2>Play, manage,<br/><em>pick up where you left off.</em></h2>
           </div>
-          <p>JAVBED is the graphical layer over JAVLI, BEDLI, EDULI, LEGLI and SERVLI. If an engine is already installed on PATH, JAVBED can use it. Otherwise it can manage its own copy from GitHub Releases.</p>
+          <p>The PySide6 launcher uses JAVLI, BEDLI, EDULI, LEGLI and SERVLI for game and server work. Use an engine already on PATH or a path you choose, or let JAVBED install a managed copy. Your existing launcher data stays in place when you import it.</p>
         </div>
       </section>
 
@@ -85,8 +85,8 @@ function App(){
         <div className="shell">
           <div className="label">FEATURES</div>
           <div className="sectionHead">
-            <h2>A real launcher,<br/>not a CLI wrapper.</h2>
-            <p>Accounts, instances, mods, modpacks, server management, updates and settings are surfaced directly in the desktop UI.</p>
+            <h2>More than a<br/><em>Play button.</em></h2>
+            <p>Move between games, Java instances, add-ons, worlds and servers in the same desktop UI. The command-line engines remain available on their own.</p>
           </div>
           <div className="featureGrid">
             {features.map(([name,desc])=><article className="feature" key={name}><span>◆</span><h3>{name}</h3><p>{desc}</p></article>)}
