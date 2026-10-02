@@ -32,6 +32,7 @@ function App(){
         <div className="links">
           <a href="#launcher">Launcher</a>
           <a href="#features">Features</a>
+          <a href="#plugins">Plugins</a>
           <a href="#engines">Engines</a>
           <a href="https://github.com/JAVBED">GitHub ↗</a>
         </div>
@@ -90,6 +91,31 @@ function App(){
           </div>
           <div className="featureGrid">
             {features.map(([name,desc])=><article className="feature" key={name}><span>◆</span><h3>{name}</h3><p>{desc}</p></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section id="plugins">
+        <div className="shell pluginSplit">
+          <div>
+            <div className="label">PLUGIN SYSTEM</div>
+            <h2>Make JAVBED<br/><em>your own.</em></h2>
+            <p>Extend JAVBED without modifying the launcher. Install a plugin package or directory, review its permissions, and manage each plugin from Settings. Plugin API 1 supports pages, commands, actions, events, file handlers, and namespaced settings.</p>
+            <div className="actions">
+              <a className="btn primary" href="https://github.com/JAVBED/javbed/blob/main/docs/plugins/README.md">Plugin developer guide <Arrow/></a>
+              <a className="btn secondary" href="https://github.com/JAVBED/javbed/tree/main/examples/plugins/hello-javbed">Example plugin <Arrow/></a>
+            </div>
+          </div>
+          <div className="pluginPanel">
+            <div className="pluginPanelTop"><span>SETTINGS / PLUGINS</span><b>Plugin API 1</b></div>
+            <div className="pluginPanelCard">
+              <span className="pluginStatus">● Enabled</span>
+              <h3>Hello JAVBED</h3>
+              <p>Commands, a sidebar page, events, and settings in one small example.</p>
+              <small>PERMISSIONS</small>
+              <div className="pluginPills"><span>UI</span><span>Commands</span><span>Settings</span></div>
+            </div>
+            <p className="pluginCaution">Third-party Python plugins can execute code on your computer. Only install plugins you trust. Permissions limit JAVBED APIs; they are not an OS sandbox.</p>
           </div>
         </div>
       </section>

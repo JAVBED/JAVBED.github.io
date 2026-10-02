@@ -4,6 +4,8 @@ Source for [JAVBED's website](https://javbed.github.io/). JAVBED Launcher is an 
 
 The page links to [launcher releases](https://github.com/JAVBED/javbed/releases) and the [source repository](https://github.com/JAVBED/javbed). The launcher repository has installation instructions and feature details.
 
+The Plugins section links to the versioned Plugin API guide and disabled example plugin. It does not advertise a marketplace.
+
 ## Run locally
 
 ```bash
